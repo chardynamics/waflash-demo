@@ -128,6 +128,7 @@ var Module = (function() {
                         var files = metadata["files"];
                         for (var i = 0; i < files.length; ++i) {
                             new DataRequest(files[i]["start"], files[i]["end"], files[i]["audio"]).open("GET", files[i]["filename"])
+                            console.log(files);
                         }
 
                         function processPackageData(arrayBuffer) {
